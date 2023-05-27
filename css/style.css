@@ -16,8 +16,10 @@ a {
   color: #5B5B5B;
 }
 
-a:hover {
-  opacity: 0.7;
+@media (min-width: 1200px) {
+  a:hover {
+    opacity: 0.7;
+  }
 }
 
 .container {
@@ -196,7 +198,7 @@ a:hover {
     transition: transform 0.3s, -webkit-transform 0.3s;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (min-width: 1200px) {
   .header-menu-item a:hover::after {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
@@ -803,8 +805,10 @@ a:hover {
   max-width: 90%;
 }
 
-.swiper-wrapper:hover .swiper-slide:not(:hover) {
-  opacity: 0.5;
+@media (min-width: 1200px) {
+  .swiper-wrapper:hover .swiper-slide:not(:hover) {
+    opacity: 0.5;
+  }
 }
 
 .swiper-slide .card-image {
