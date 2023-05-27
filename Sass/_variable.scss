@@ -1,0 +1,24 @@
+$layout-width-inner:1200px;
+
+$font-en:'Comfortaa', cursive;
+$font-ja:'Zen Maru Gothic',sans-serif;
+// $font-en:'Lato', sans-serif;
+// $font-ja:'Noto Sans JP', sans-serif;
+
+$primary-color:#AAD6EC;
+$font-color:#5B5B5B;
+$accent-color:#FC9D9D;
+$back-color:#EEF9FF;
+
+$breakpoints: (
+'sp': "(max-width: 767px)",
+'tab': "(min-width: 768px) and (max-width: #{$layout-width-inner - 1px})",
+'pc': "(min-width: #{$layout-width-inner})",
+'md':"(min-width: 768px)"
+) !default;
+
+@mixin mq($breakpoint: sp) {
+      @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+      }
+    }
